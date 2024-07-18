@@ -4,31 +4,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href="style.css"> 
         <script type="text/javascript" src="main.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <title>My full-stack portfolio</title>
     </head>
     <body>
         <header>
             <nav>
-                    <ol>
+                    <ul class = "navbar">
                         <li>Work</li>
                         <li>Contact</li>
                         <li><a href="#aboutMe">About</a></li>
-                    </ol>
+                    </ul>
             </nav>
         </header>
         <main>
-            <article>
-                <h1 id = "mainHeading">Hi, my name is Junain.I am a full-stack developer</h1>
-                <span class = "divider one"></span>
+            <article class = "heading">
+                <h1 id = "mainHeading">Hi, my name is Junain.<br>I am a <a class = "fullStack">full-stack developer.</a></h1>
+                <span class = "dividerOne"></span>
             </article>
-            <article>
+            <article class="aboutMe">
+                <h2>About me</h2>
                 <p id = "aboutMe">I am a passionate and skilled full-stack developer with a comprehensive education from <b>Code Academy</b>, 
                     where I completed the <b>Full Stack Developer</b> program. With a strong foundation in both front-end and back-end technologies, 
                     I am dedicated to creating efficient and user-friendly web applications. My expertise <b>HTML, CSS, JavaScript, React, Node.js,</b> and 
-                    various other frameworks and tools essential for modern web development. I am committed to continuous learning and staying 
-                    updated with the latest industry trends to deliver high-quality solutions.
+                    various other frameworks and tools essential for modern web development.
                 </p>
-                <span class = "divider two"></span>
+                <span class = "dividerTwo"></span>
             </article>
+            <article>
+
+            </article>
+
 
         </main>
         <footer>

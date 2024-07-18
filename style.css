@@ -1,0 +1,66 @@
+html{
+    font-family: inter;
+    color: #383635;
+    background-color: #D0F4DE;
+}
+
+.navbar{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-weight: 700;
+    margin-right: 2rem;
+    font-size: 1.3rem;
+}
+
+.navbar li{
+    margin-right: 3rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mainHeading{
+    font-size: 5rem;
+    text-align: center;
+
+}
+
+.fullStack{
+    color: 	#6A994E;
+}
+
+.dividerOne{
+    height: 0.5rem;
+    width: 80%;
+    border-radius: 10px;
+
+    background-color:#383635 ;
+}
+
+.aboutMe{
+   font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+
+
+}
+
+
+.aboutMe p{
+    margin-top: 0px;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
