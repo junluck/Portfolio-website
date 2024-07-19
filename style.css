@@ -27,11 +27,41 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: clip;
+    margin: 0 auto;
+    width: 70%;
+    
 }
+
 #mainHeading{
-    font-size: 5rem;
+    font-size: clamp(2.5rem,3.15vw + 0.9rem,10rem);
     text-align: center;
 
+}
+.rubbyDuck{
+    display:flex ;
+    height: 7rem;
+    width: 7rem;
+    animation: duck-move 8000ms ease-in-out;
+    transform: translate(50rem);
+    position: relative;
+
+   
+
+}
+
+@keyframes duck-move{
+    0% {
+        transform: translateX(-50rem);
+
+    
+       
+    }
+   
+    
+    100% {
+        transform: translateX(50rem);
+    }
 }
 
 .fullStack{
@@ -40,7 +70,7 @@ html{
 
 .dividerOne{
     height: 0.5rem;
-    width: 80%;
+    width: 100%;
     border-radius: 10px;
 
     background-color:#383635 ;
