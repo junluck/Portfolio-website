@@ -7,23 +7,52 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-        <title>My full-stack portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <title>Junain Davids</title>
     </head>
     <body>
         <header>
+            <ul class = "hiddenMenu">
+                <li>PORTFOLIO</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+                <li>RESUME</li>
+                <li>LINKEDIN</li>
+                <li>GITHUB</li>
+
+            </ul>
+
+            <nav class = "hum">
+                <div  class = "humburger-Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+
             <nav>
-                    <ul class = "navbar">
-                        <li>Work</li>
-                        <li>Contact</li>
-                        <li><a href="#aboutMe">About</a></li>
-                    </ul>
+                <ul class = "navbar">
+                    <li>PORTFOLIO</li>
+                    <li><a href="#aboutMe">ABOUT</a></li>
+                    <li>CONTACT</li>
+                </ul>
             </nav>
         </header>
         <main>
             <article class = "heading">
-                <h1 id = "mainHeading">Hi, my name is Junain.<br>I am a <a class = "fullStack">full-stack developer.</a></h1>
-                <img class = "rubbyDuck" src = "./Resources/rubber duck.svg">
-                <span class = "dividerOne"></span>
+                <h1 id = "mainHeading">Hi! my name is<br><a class = "fullname">Junain Davids.</a><br>I'm a full-stack developer</h1>
+                <div class="button">
+                    <a href="#portfolio" class = "portfolioAnchor"><h2 class = "portfolioButton">View portfolio</h2></a>
+                </div>
+            </article>
+            <article class = "portfolio" id = "portfolio">
+                <h2>Portfolio</h2>
+                <div class="projects">
+                    <h3 class = "editdoo-heading">Editdoo</h3>
+                    <img class = "editdoo-image" src="./Resources/editdoo.png"/>
+                </div>
             </article>
             <article class="aboutMe">
                 <h2>About me</h2>
