@@ -4,6 +4,7 @@ html{
     background-color:  #ffffff;
     scroll-behavior: smooth;
 }
+
 .main-nav{
     position: fixed;
     top:0;
@@ -21,15 +22,39 @@ html{
     justify-content: end;
     font-weight: 600;
     margin-right: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: #ffffff;
     
 }
 
 .navbar li{
+    display: flex;
+    justify-content: center;
     margin-right: 3rem;
     cursor: pointer;
+    text-underline-offset: 10px;
+    text-decoration: none;
 }
+.navbar li::after{
+    content:"";
+    background-color: #6A994E;
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    border-radius: 9px;
+    z-index: 1;
+    right: 200;
+    margin-top: 1.5rem;
+    transform: scaleX(0);
+
+
+}
+.navbar li:hover:after{
+   transition: all 800ms ease;
+    transform: scaleX(1);
+
+}
+
 
 .navbar a{
     text-decoration: none;
@@ -49,7 +74,7 @@ html{
     right: 20px;
     height: 40px;
     width: 40px;
-    bottom: 150px;
+    bottom: 200px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
@@ -114,7 +139,7 @@ html{
 
 .hiddenMenu.active{
        right: -80%;
-       animation: --hiddenMenu-animation 1000ms ease-in-out both;
+       animation: --hiddenMenu-animation 900ms ease-in-out both;
 }
 
 
@@ -125,30 +150,56 @@ html{
     justify-content: center;
     align-items: center;
     overflow: clip;
-    margin: 15rem auto 20rem auto;
+    margin: 15rem auto 15rem auto;
+    padding-bottom:5% ;
     width: 70%;
     position: relative;
-    animation: --heading-animation 1000ms ease-out;
+    
     
 }
 
-#mainHeading{
+.mainHeading{
     font-size: clamp(0.5rem,3.15vw + 0.2rem,10rem);
     font-weight: 600;
+    margin: 0;
+    animation: --heading-animation 950ms ease-out;
+    animation-fill-mode: forwards; 
+    position: relative;
+    animation-delay: 0.1s;
+    opacity: 0;
     
-    
-
+}
+.button{
+    z-index: 5;
 }
 
 .fullname{
     font-size:clamp(1.5rem,3.15vw + 3rem,10rem) ;
     color: 	#6A994E;
+    margin: 0;
+    animation: --fullname-animation 950ms ease-out ;
+    animation-fill-mode: forwards; 
+    position: relative;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.fullStackDev{
+    margin: 0;
+    font-size: clamp(0.5rem,3.15vw + 0.2rem,10rem);
+    font-weight: 600;
+    animation: --fullStackDev-animation 950ms ease-out ;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-delay: 0.6s;
+    opacity: 0;
 }
 a{
     color: inherit;
     text-decoration: none;
 
 }
+
 .portfolioButton{
     border: solid 4px #383635;
     width: max(10rem,12%);
@@ -160,16 +211,24 @@ a{
     font-size:1.3rem ;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    transition: background-color 300ms, transform 300ms;
-    scroll-behavior: smooth; 
+    
+    scroll-behavior: smooth;
+    margin-top: 30%; 
+    animation: --portfolioButton-animation 950ms ease-out;
+    animation-fill-mode: forwards; 
+    position: relative;
+    animation-delay: 0.9s;
+    opacity: 0;
+    transition: background-color 300ms, scale 100ms;
+    
 }
 
 
 
 
 .portfolioButton:hover{
+    
     background-color: #6A994E;
-    transform: scale(1.03);
 }
 
 .portfolio{
@@ -181,7 +240,12 @@ a{
     justify-content: center;
     align-content: center;
     font-size: 2rem;
+    opacity: 0;
+    
+    animation: --portfolio-animation 950ms ease-out ;
 }
+
+
 
 .portfolio h2{
     grid-area: portfolio;
@@ -205,10 +269,22 @@ a{
     height: 25rem;
     border-radius: 20px;
     margin-top: 0;
-    border: 3px solid #383635;
+
+    
+   
 }
+
+
+.shape{
+    height: 100px;
+    width: 100px;
+    background-color: #6A994E;
+    position: absolute;
+}
+
 .editdoo-heading{
     font-size: 2.5rem;
+    margin: 0;
 }
 .aboutMe h2{
    font-size: 3rem;
@@ -244,14 +320,50 @@ a{
 @keyframes --heading-animation {
     0%{
         opacity: 0;
-        bottom: -20rem;
+        transform: translateY(70px);
     
     }
     100%{
         opacity: 1;
-        bottom: 0rem;
     }
 }
+
+@keyframes --fullname-animation{
+    0%{
+        opacity: 0;
+        transform: translateY(70px);
+    
+    }
+    100%{
+        opacity: 1;
+    }
+} 
+
+@keyframes --fullStackDev-animation  {
+    0%{
+        opacity: 0;
+        transform: translateY(70px);
+    
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+@keyframes --portfolioButton-animation {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
 @media(min-width:1620px){
     .humburger-Menu{
         display: none;
@@ -287,8 +399,10 @@ a{
         right: -55%;
     }
     .hum{
-        margin-top: 8%;
         margin-left: 95%;
+    }
+    .humburger-Menu{
+        bottom: 100px;
     }
     .aboutMe{
         font-size: 0.7rem;
