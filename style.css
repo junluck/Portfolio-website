@@ -156,7 +156,6 @@ html{
     position: relative;
     overflow: hidden;
     
-    
 }
 
 .mainHeading{
@@ -258,6 +257,7 @@ a{
     align-self: center;
     font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
     margin-top:5%;
+    
 
 }
 .projects{
@@ -276,7 +276,7 @@ a{
 
 .editdooTitle{
     margin-bottom: 3rem;
-    font-size: clamp(1.5rem,2.15vw + 0.1rem,10rem);
+    font-size: clamp(1rem,2.15vw + 0.1rem,10rem);
     transform:translateY(170px);
     opacity: 0;
 }
@@ -290,7 +290,7 @@ a{
 }
 
 .editdooDescription{
-    font-size: clamp(0.1rem,1vw + 0.1rem,10rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,10rem) ;
     line-height: 140%;
     transform:translateY(170px);
     opacity: 0;
@@ -403,19 +403,36 @@ a{
 }
 
 @media (max-width:680px){
+
     .fullname{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-    
+    .portfolio{
+      
+      margin: 0;
+      grid-template-rows: 3.5rem auto;
+    }
+    .portfolioHeading{
+       margin: 0; 
+    }
     .portfolioButton{
         width: max(5rem,12%);
         height: 2rem;
         font-size: 0.7rem;
         border: solid 2px #383635;
     }
-
+    .editdooTitle{
+        margin: 0;
+    }
+    .editdooImage{
+        width: 20rem;
+    }
+    .editdooDescription{
+        width: 200%;
+      
+    }
     .heading{
-        margin: 8rem auto;
+        margin: 10rem  auto;
     }
     .hiddenMenu.active{
         right: -55%;
@@ -424,7 +441,7 @@ a{
         margin-left: 95%;
     }
     .humburger-Menu{
-        bottom: 100px;
+        bottom: 150px;
     }
     .aboutMe{
         font-size: 0.7rem;
