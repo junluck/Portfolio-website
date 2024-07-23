@@ -1,3 +1,4 @@
+//storing classes in variables
 const humburger = document.querySelector(".humburger-Menu ")
 const hiddenMenu = document.querySelector(".hiddenMenu")
 const button = document.querySelector(".portfolioAnchor");
@@ -6,15 +7,24 @@ const editdooTitle = document.querySelector(".editdooTitle");
 const editdooImage = document.querySelector(".editdooImage");
 const editdooDesc = document.querySelector(".editdooDescription");
 
+//page reaload back to home link
 location.hash = "";
 
-const css = window.document.styleSheets;
-
-
+//humburger menu that toggles on active class when clicked
 humburger.addEventListener("click", () =>{
     humburger.classList.toggle("active");
     hiddenMenu.classList.toggle("active");
 })
+
+//function that takes projects and appends each project to the projects div
+const appendProjects = function (headingProject){
+  const projects = document.getElementById("projects");
+  const heading = document.createElement("h3");
+  heading.textContent = headingProject;
+  projects.append(heading);
+
+
+} 
 
 const observer = new IntersectionObserver(entries =>{
   entries.forEach(entry =>{
@@ -27,7 +37,7 @@ const observer = new IntersectionObserver(entries =>{
               opacity:1,
               
             }
-          ],{ duration: 1000,
+          ],{ duration: 1200,
               iterations:1,
               fill:"forwards",
               easing:"ease-out"
@@ -53,7 +63,7 @@ const observer = new IntersectionObserver(entries =>{
             opacity:1,
             
           }
-        ],{ duration: 1000,
+        ],{ duration: 1200,
             iterations:1,
             fill:"forwards",
             easing:"ease-out"
@@ -67,7 +77,7 @@ const observer = new IntersectionObserver(entries =>{
                 opacity:1,
                 
               }
-            ],{ duration: 1000,
+            ],{ duration: 1200,
                 iterations:1,
                 fill:"forwards",
                 easing:"ease-out"
