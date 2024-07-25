@@ -198,7 +198,7 @@ html{
 a{
     color: inherit;
     text-decoration: none;
-
+    -webkit-tap-highlight-color: transparent;
 }
 
 .portfolioButton{
@@ -233,6 +233,7 @@ a{
 }
 
 .portfolio{
+    position: relative;
     display: grid;
     grid-template-rows: 8.5rem auto;
     grid-template-areas:"portfolio"
@@ -250,7 +251,7 @@ a{
 
 
 .portfolioHeading{
-    transform:translateY(170px);
+    transform:translateY(40px);
     opacity: 0;
     grid-area: portfolio;
     justify-self: center;
@@ -261,14 +262,12 @@ a{
 
 }
 .projects{
-
     grid-area: project;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    
+    width: 40%; 
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -277,25 +276,146 @@ a{
 .editdooTitle{
     margin-bottom: 3rem;
     font-size: clamp(1rem,2.15vw + 0.1rem,10rem);
-    transform:translateY(170px);
+    transform:translateY(40px);
     opacity: 0;
+
+}
+.buttonAndImage{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform:translateY(40px);
+    opacity: 0;
+   
+    
+}
+.portfolioButtonLeft{
+    height: 35px;
+    margin-right:2% ;
+  
+}
+
+.portfolioButtonRight{
+    
+    height: 35px;
+    margin-left:2% ;
+   
+    
 }
 .editdooImage{
     width: 100%;
     margin-top: 0;
-    transform:translateY(170px);
-    opacity: 0;
     border-radius:20px;
-       
+    
+}
+
+
+
+.editdooDescription p{
+    margin: 0;
+    
+}
+
+.sliderbuttons{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    height: 40px;
+    width: 70px;
+    position: relative;
+}
+
+
+
+.sliderbuttons span{
+    border: solid 2px #383635;
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    border-radius: 30px;
+    transition:background-color 400ms ;
+}
+
+
+.sliderbuttons span:hover{
+    background-color: #6A994E;
+    cursor: pointer;
+
+
+
+}
+.sliderbuttons span:nth-child(1){
+    align-self: baseline;
+}
+
+.sliderbuttons span:nth-child(2){
+    align-self: center;
+}
+
+.sliderbuttons span:nth-child(3){
+    align-self: end;
 }
 
 .editdooDescription{
     font-size: clamp(1rem,1vw + 0.1rem,10rem) ;
     line-height: 140%;
-    transform:translateY(170px);
+    margin-top: 0;
+    transform:translateY(40px);
     opacity: 0;
 }
+.buttons{
+    display: flex;
+    flex-direction: row;
+}
 
+.viewCode{
+    margin-left: 30px;
+    
+}
+
+.viewCode,.tryDemo{
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 20%;
+    min-width: 110px;
+    font-weight: 600;
+    font-size:clamp(0.8rem,0.55vw + 0.2rem,3rem) ;
+    border: solid 2px #383635;
+    cursor: pointer;
+}
+
+.viewCode:hover,.tryDemo:hover{}
+
+.viewCode::after{
+    content: "";
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    background: url("./Resources/github-seeklogo.svg") no-repeat;
+    background-size: contain;
+    margin-left: 8px;
+}
+
+.tryDemo::after{
+    content: "";
+    display: inline-block;
+    min-width: 17px;
+    min-height: 17px;
+    background: url("./Resources/externallink2.svg") no-repeat;
+    background-size: contain;
+    margin-left: 8px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
 
 .shape{
     height: 100px;
@@ -398,6 +518,9 @@ a{
 }
 
 @media(max-width:1619px){
+    .humburger-Menu{
+        bottom: 230px;
+    }
     .navbar{
         display: none;
     }
@@ -432,11 +555,19 @@ a{
         margin-bottom: 4rem;
         padding-bottom: 2rem;
         width: 100%;
+
+    }
+    .mainHeading{
+        font-size: x-large;
     }
 
     .fullname{
-        font-size: 3.2rem;
+        font-size: 2.95rem;
         
+    }
+
+    .fullStackDev{
+        font-size: x-large;
     }
 
     .portfolio{
