@@ -291,17 +291,25 @@ a{
    
     
 }
+.portfolioButtonRight:active,.portfolioButtonLeft:active{
+    transform: scale(0.90);
+   
+}
+
 .portfolioButtonLeft{
     height: 35px;
     margin-right:2% ;
-  
+    cursor: pointer;
+    transition: transform 300ms ease;
 }
 
 .portfolioButtonRight{
     
     height: 35px;
     margin-left:2% ;
-   
+    cursor: pointer;
+    transition: transform 300ms ease;
+
     
 }
 .editdooImage{
@@ -310,6 +318,21 @@ a{
     border-radius:20px;
     
 }
+
+.editdooWorkSec{
+    width: 100%;
+    margin-top: 0;
+    border-radius:20px;
+    display: none;
+}
+
+.editdooFaqSec{
+    width: 100%;
+    margin-top: 0;
+    border-radius:20px;
+    display: none;
+}
+
 
 
 
@@ -393,7 +416,7 @@ a{
     cursor: pointer;
 }
 
-.viewCode:hover,.tryDemo:hover{}
+
 
 .viewCode::after{
     content: "";

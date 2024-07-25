@@ -6,16 +6,87 @@ const portfolio = document.querySelector(".portfolioHeading");
 const editdooTitle = document.querySelector(".editdooTitle");
 const editdooImage = document.querySelector(".buttonAndImage");
 const editdooDesc = document.querySelector(".editdooDescription");
+const editdooFirstPic = document.querySelector(".editdooImage");
+const editdooSecondPic = document.querySelector(".editdooWorkSec");
+const editdooThirdPic = document.querySelector(".editdooFaqSec");
+const rightArrow = document.querySelector(".portfolioButtonRight");
+const leftArrow = document.querySelector(".portfolioButtonLeft");
+const arrayOfPictures = [editdooFirstPic, editdooSecondPic,editdooThirdPic];
 
 
 //page reaload back to home link
 location.hash = "";
+
+
 
 //humburger menu that toggles on active class when clicked
 humburger.addEventListener("click", () =>{
     humburger.classList.toggle("active");
     hiddenMenu.classList.toggle("active");
 })
+
+//making a slider for portfolio
+function eventListenerForSlider(right,left,array){
+  let count = -1;
+  right.addEventListener("click", () =>{
+      count += 1;
+      if (count === array.length) {
+        count = 0;
+      }
+      if (count === 0){
+        array[count].style.display = "none";
+        array[count + 1].style.display = "flex";
+        array[count + 2].style.display = "none";  
+      } 
+    
+      else if (count === 1){
+        array[count - 1].style.display = "none";
+        array[count].style.display = "none";
+        array[count + 1].style.display = "flex";  
+      } 
+    
+      else if (count === 2) {
+        array[count - 2].style.display = "flex";
+        array[count - 1].style.display = "none";
+        array[count].style.display = "none";  
+      } 
+     
+    })
+      
+
+  left.addEventListener("click", ()=>{
+        count -= 1;
+        if (count < 0 ) {
+        count = array.length - 1 ;
+      }
+      if (count === 0){
+        array[count].style.display = "none";
+        array[count + 1].style.display = "flex";
+        array[count + 2].style.display = "none";  
+      } 
+    
+      else if (count === 1){
+        array[count - 1].style.display = "none";
+        array[count].style.display = "none";
+        array[count + 1].style.display = "flex";  
+      } 
+    
+      else if (count === 2) {
+        array[count - 2].style.display = "flex";
+        array[count - 1].style.display = "none";
+        array[count].style.display = "none";  
+      } 
+     
+      
+      })    
+
+ 
+  
+  
+}
+
+eventListenerForSlider(rightArrow,leftArrow,arrayOfPictures);
+
 
 //function that takes projects and appends each project to the projects div
 const appendProjects = function (headingProject)
