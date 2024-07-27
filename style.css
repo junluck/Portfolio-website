@@ -375,6 +375,7 @@ a{
 }
 .sliderbuttons span:nth-child(1){
     align-self: baseline;
+    background-color: #6A994E;
 }
 
 .sliderbuttons span:nth-child(2){
