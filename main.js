@@ -15,6 +15,7 @@ humburger.addEventListener("click", () =>{
 // Function to add event listeners for a slider functionality
 function eventListenerForSlider(right,left,array,arrayOfCircles){
   let count = -1;
+  let countTwo = 0;
   // Event listener for the right arrow click
   right.addEventListener("click", () =>{
       count += 1;
@@ -53,10 +54,18 @@ function eventListenerForSlider(right,left,array,arrayOfCircles){
       
   // Event listener for the left arrow click
   left.addEventListener("click", ()=>{
-        count -= 1;
-        if (count < 0 ) {
+      count -= 1;
+      console.log(countTwo);
+      countTwo += 1;
+
+      if (countTwo === 1 && count === -2){
+        count = 1;
+      }
+
+      if (count < 0 ) {
         count = array.length - 1 ;
       }
+
       // Adjusting the display property of array items based on the count
       if (count === 0){
         array[count].style.display = "none";
