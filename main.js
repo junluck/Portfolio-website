@@ -202,9 +202,13 @@ const observer = new IntersectionObserver(entries =>{
 const portfolio = document.querySelector(".portfolioHeading");
 const editdooTitle = document.querySelector(".editdooTitle");
 const editdooImage = document.querySelector(".buttonAndImage");
+const aboutMeHeading = document.querySelector(".aboutMeHead");
+const aboutParagraph = document.querySelector(".aboutMeDescription");
 //Invoke observe method on elements
 observer.observe(portfolio);
 observer.observe(editdooTitle);
+observer.observe(aboutMeHeading);
+observer.observe(aboutParagraph);
 animateTwoElementsIn.observe(editdooImage);
 
 

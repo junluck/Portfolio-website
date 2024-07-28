@@ -45,12 +45,14 @@ html{
     z-index: 1;
     right: 200;
     margin-top: 1.5rem;
+    transition: transform 800ms ease;
     transform: scaleX(0);
+
 
 
 }
 .navbar li:hover:after{
-   transition: all 800ms ease;
+   
     transform: scaleX(1);
 
 }
@@ -251,7 +253,8 @@ a{
     align-content: center;
     font-size: 2rem;
     overflow: hidden;
-    padding-bottom: 7rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
     
     
 }
@@ -276,7 +279,8 @@ a{
     justify-content: center;
     align-items: center;
     width: 40%; 
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -463,27 +467,63 @@ a{
     font-size: 2.5rem;
     margin: 0;
 }
-.aboutMe h2{
-   font-size: 3rem;
-    display: none;
+
+.aboutMeDescription{
+    transform:translateY(40px);
+    opacity: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    background-color: #6A994E;
+    margin:auto ;
+}
+
+.manProfilePic{
+    width: 7vw;
+    height: 100%;
+    margin-right: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column-start: 1;
+    grid-column-end:2 ;
+    background-color: black;
+    
+}
+
+.aboutMe{
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
-    margin: auto auto;
+    margin: auto;
+    padding: 0;
+    width: 40%; 
+}
+.aboutMe h2{
+    margin-bottom: 3rem;
+    font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
+
+    transform:translateY(40px);
+    opacity: 0;
 
 
 }
 
 
 .aboutMe p{
-    width: 40%;
-    font-size: 1.3rem;
-    margin-top: 0px;
-    margin-left: 20%;
-    margin-right: 20%;
-    display: none;
+    font-size: clamp(1rem,1vw + 0.1rem,10rem) ;
+    line-height: 140%;
+    margin:auto;
+   
+    grid-column-start: 2;
+    grid-column-end:3 ;
+    background-color: pink;
+   
+    
 
 }
+
+
 
 @keyframes --hiddenMenu-animation{
     0%{
@@ -554,17 +594,21 @@ a{
 
 @media(max-width:1619px){
     .humburger-Menu{
-        bottom: 230px;
+        bottom: 220px;
     }
     .navbar{
         display: none;
     }
     .editdooImage,.editdooFaqSec,.editdooWorkSec{
         width: 70vw;
+        border-radius: 20px;
     }
 
     .editdooDescription{
         width: 170%;
+        align-content: center;
+        justify-items: center;
+       flex-direction: column;
       
     }
 
@@ -580,6 +624,12 @@ a{
         font-size: xx-large;
         margin-bottom: 1rem;
     }
+
+    .aboutMe{
+        width: 70%;
+    }
+
+    
 }
 
 @media (max-width:680px){
@@ -627,7 +677,7 @@ a{
         margin-bottom: 1rem;
     }
     .editdooImage,.editdooFaqSec,.editdooWorkSec{
-        border-radius: 8px;
+        border-radius: 15px;
         width: 77vw;
     }
     .editdooDescription{
