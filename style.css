@@ -286,7 +286,7 @@ a{
 }
 
 .editdooTitle{
-    margin-bottom: 3rem;
+    margin-bottom: 2%;
     font-size: clamp(1rem,2.15vw + 0.1rem,10rem);
     transform:translateY(40px);
     opacity: 0;
@@ -382,6 +382,12 @@ a{
 
 
 .sliderbuttons span:hover{
+    background-color: #6A994E!important;
+    cursor: pointer;
+}
+
+.sliderbuttons span:nth-child(1){
+    align-self: baseline;
     background-color: #6A994E;
     cursor: pointer;
 
@@ -611,14 +617,16 @@ a{
     }
 
     .editdooTitle{
-        font-size: xx-large;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
     }
 
     .aboutMe{
         width: 70%;
     }
-
+    .aboutMe h2{
+        font-size: xxx-large;
+    }
     
 }
 
@@ -636,6 +644,10 @@ a{
         grid-column-start: 2;
         grid-column-end:3 ;
     }
+    
+    
+
+   
 
 }
 @media (max-width: 1179px){
@@ -644,6 +656,14 @@ a{
         margin-right: auto;
         margin-bottom: 8%;
         width: 20vw;
+    }
+    .aboutMe h2{
+        margin:auto;
+        font-size: clamp(1.5rem,3.15vw + 0.9rem,10rem) ;
+    
+
+    
+    
     }
 }
 @media (max-width: 680px){
@@ -690,6 +710,12 @@ a{
         font-size: x-large;
         margin-bottom: 1rem;
     }
+
+    .aboutMe h2{
+        font-size: xx-large;
+        margin:auto
+    }
+    
     .editdooImage,.editdooFaqSec,.editdooWorkSec{
         border-radius: 15px;
         width: 77vw;

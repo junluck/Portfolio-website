@@ -16,6 +16,45 @@ humburger.addEventListener("click", () =>{
 function eventListenerForSlider(right,left,array,arrayOfCircles){
   let count = -1;
   let countTwo = 0;
+  arrayOfCircles.forEach((element,index) => {
+    element.addEventListener("click", () =>{
+      
+      if (index === 0){
+        count = -1;
+        arrayOfCircles[index].style.backgroundColor = "#6A994E";
+        arrayOfCircles[index + 1].style.backgroundColor = "transparent";
+        arrayOfCircles[index + 2].style.backgroundColor = "transparent";
+        array[index].style.display = "flex";
+        array[index + 1].style.display = "none";
+        array[index + 2].style.display = "none";
+        
+      }
+
+      else if(index === 1){
+        count = 0;
+        arrayOfCircles[index].style.backgroundColor = "#6A994E";
+        arrayOfCircles[index - 1].style.backgroundColor = "transparent";
+        arrayOfCircles[index + 1].style.backgroundColor = "transparent";
+        array[index].style.display = "flex";
+        array[index - 1].style.display = "none";
+        array[index + 1].style.display = "none";
+
+      }
+
+      else if(index === 2){
+        count = 1;
+        arrayOfCircles[index].style.backgroundColor = "#6A994E";
+        arrayOfCircles[index - 1].style.backgroundColor = "transparent";
+        arrayOfCircles[index - 2].style.backgroundColor = "transparent";
+        array[index].style.display = "flex";
+        array[index - 1].style.display = "none";
+        array[index - 2].style.display = "none";
+        
+      }
+      
+    })
+    
+  })
   // Event listener for the right arrow click
   right.addEventListener("click", () =>{
       count += 1;
