@@ -12,6 +12,7 @@ html{
     left: 0;
     background-color: #ffffff;
     z-index: 1;
+    z-index: 3;
     
 }
 
@@ -24,6 +25,7 @@ html{
     margin-right: 1rem;
     font-size: 0.9rem;
     background-color: #ffffff;
+    
     
 }
 
@@ -69,16 +71,19 @@ html{
     margin-left: 98%;
     margin-top: -1%;
     z-index: 3;
+   
 }
+
 .humburger-Menu{
     position: relative;
     display: flex;
-    right: 20px;
+    right: 30px;
     height: 40px;
     width: 40px;
-    bottom: 200px;
+    bottom: 20px;
     cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;  
+    
 }
 
 .humburger-Menu span{
@@ -137,7 +142,7 @@ html{
 }
 .hiddenMenu li{
     cursor: pointer;
-    margin-top: 20%;
+    margin-top: 100px;
     -webkit-tap-highlight-color: transparent;
     transition: transform 300ms ease;
 
@@ -263,7 +268,6 @@ a{
 
 .portfolioHeading{
     transform:translateY(40px);
-    opacity: 0;
     grid-area: portfolio;
     justify-self: center;
     align-self: center;
@@ -285,39 +289,40 @@ a{
     margin-right: auto;
 }
 
-.editdooTitle{
+.editdooTitle,.jammmingTitle{
     margin-bottom: 2%;
     font-size: clamp(1rem,2.15vw + 0.1rem,10rem);
     transform:translateY(40px);
-    opacity: 0;
+    
 
 }
-.buttonAndImage{
+.buttonAndImage,.jammmingbuttonAndImage{
     position: relative;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     transform:translateY(40px);
-    opacity: 0;
+    
    
     
 }
-.portfolioButtonRight:active,.portfolioButtonLeft:active{
+.portfolioButtonRight:active,.portfolioButtonLeft:active,.jammmingPortfolioButtonLeft:active,.jammmingPortfolioButtonRight:active{
     transform: scale(0.90);
    
 }
 
-.portfolioButtonLeft{
+.portfolioButtonLeft,.jammmingPortfolioButtonLeft{
     height: 35px;
     margin-right:2% ;
     cursor: pointer;
     transition: transform 300ms ease;
     -webkit-tap-highlight-color: transparent;
+    
 }
 
 
-.portfolioButtonRight{
+.portfolioButtonRight,.jammmingPortfolioButtonRight{
     
     height: 35px;
     margin-left:2% ;
@@ -327,21 +332,22 @@ a{
 
     
 }
-.editdooImage{
+.editdooImage,.jammmingImage{
     width: 100%;
     margin-top: 0;
     border-radius:20px;
+    height: 100%;
     
 }
 
-.editdooWorkSec{
+.editdooWorkSec,.jammmingImageTwo{
     width: 100%;
     margin-top: 0;
     border-radius:20px;
     display: none;
 }
 
-.editdooFaqSec{
+.editdooFaqSec,.jammmingImageThree{
     width: 100%;
     margin-top: 0;
     border-radius:20px;
@@ -351,12 +357,12 @@ a{
 
 
 
-.editdooDescription p{
+.editdooDescription p,.jammmingDescription p{
     margin: 0;
     
 }
 
-.sliderbuttons{
+.sliderbuttons,.jammmingsliderbuttons{
     
     display: flex;
     flex-direction: column;
@@ -371,7 +377,7 @@ a{
 
 
 
-.sliderbuttons span{
+.sliderbuttons span,.jammmingsliderbuttons span{
     border: solid 2px #383635;
     height: 12px;
     width: 12px;
@@ -381,12 +387,12 @@ a{
 }
 
 
-.sliderbuttons span:hover{
+.sliderbuttons span:hover,.jammmingsliderbuttons span:hover{
     background-color: #6A994E!important;
     cursor: pointer;
 }
 
-.sliderbuttons span:nth-child(1){
+.sliderbuttons span:nth-child(1),.jammmingsliderbuttons span:nth-child(1){
     align-self: baseline;
     background-color: #6A994E;
     cursor: pointer;
@@ -394,37 +400,37 @@ a{
 
 
 }
-.sliderbuttons span:nth-child(1){
+.sliderbuttons span:nth-child(1),.jammmingsliderbuttons span:nth-child(1){
     align-self: baseline;
     background-color: #6A994E;
 }
 
-.sliderbuttons span:nth-child(2){
+.sliderbuttons span:nth-child(2),.jammmingsliderbuttons span:nth-child(2){
     align-self: center;
 }
 
-.sliderbuttons span:nth-child(3){
+.sliderbuttons span:nth-child(3),.jammmingsliderbuttons span:nth-child(3){
     align-self: end;
 }
 
-.editdooDescription{
+.editdooDescription,.jammmingDescription{
     font-size: clamp(1rem,1vw + 0.1rem,10rem) ;
     line-height: 140%;
     margin-top: 0;
     transform:translateY(40px);
-    opacity: 0;
+   
 }
-.buttons{
+.buttons,.jammmingbuttons{
     display: flex;
     flex-direction: row;
 }
 
-.viewCode{
+.viewCode,.jammmingViewCode{
     margin-left: 30px;
     
 }
 
-.viewCode,.tryDemo{
+.viewCode,.tryDemo,.jammmingTryDemo,.jammmingViewCode{
     height: 2.5rem;
     display: flex;
     justify-content: center;
@@ -440,7 +446,7 @@ a{
 
 
 
-.viewCode::after{
+.viewCode::after,.jammmingViewCode::after{
     content: "";
     display: inline-block;
     min-width: 20px;
@@ -450,7 +456,7 @@ a{
     margin-left: 8px;
 }
 
-.tryDemo::after{
+.tryDemo::after,.jammmingTryDemo::after{
     content: "";
     display: inline-block;
     min-width: 17px;
@@ -476,7 +482,7 @@ a{
 
 .aboutMeDescription{
     transform:translateY(40px);
-    opacity: 0;
+
     display: grid;
     
     grid-column-gap: 30px;
@@ -484,12 +490,29 @@ a{
 }
 
 .manProfilePic{
-    width: 10vw;
+    width:300px;
     height: 100%;
-    margin-right: 10%;
+    margin-right: 50px;
     margin-top: auto;
     margin-bottom: auto;
-    
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    transition: 500ms opacity ease;
+}
+
+.manProfilePicTwo{
+    width:300px;
+    height: 100%;
+    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .aboutMe{
@@ -499,15 +522,14 @@ a{
     align-items: center;
     margin: auto;
     padding: 0;
-    width: 40%; 
+    width: 50%; 
 }
 .aboutMe h2{
     margin-bottom: 2rem;
     font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
 
     transform:translateY(40px);
-    opacity: 0;
-
+  
 
 }
 
@@ -518,8 +540,407 @@ a{
     margin:auto;
 
 }
+.technolgyHeading{
+    font-size: 1.3rem;
+}
+.technology{
+    height: 200px;
+    width: 400px;
+}
+.technologiesUsed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.technologyOne{
+    margin-top: 0px;
+    display: grid;
+    grid-template-rows: 16% 42% 42%;
+    grid-template-columns:25% 25% 25% 25%;
+    height: 100%;
+
+}
+.groupOfTechs{
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+}
+.technology{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    height: 100%;
+}
+
+.Front-End{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  color: white;
+  z-index: 2;
+  justify-self: center;
+  align-self: center;
+}
+
+.javascript,.chai{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 60px;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+
+.javascriptPic{
+    height: 60px;
+}
+
+.css,.jest{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 60px;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+
+}
 
 
+
+.react,.mocha{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 60px;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+
+.redux,.git{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 60px;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+.popUpDiv{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    opacity: 0;
+}
+.popUp{
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    left:-20%;
+   
+}
+.javascriptText{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUp{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.cssParagragh{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+   
+}
+.popUpTwo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+    
+
+}
+.popUpDivTwo{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-50%;
+    z-index: 1;
+    opacity: 0;
+}
+.cssLogo{
+    height: 60px;
+}
+.html{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+
+}
+
+.htmlLogo{
+    height: 60px;
+
+}
+
+.popUpThree{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+    
+}
+
+.popUpDivThree{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+    
+}
+
+.htmlParagragh{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+   
+}
+
+.reactLogo{
+    height: 60px;
+}
+
+.popUpDivFour{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+
+}
+
+.reactParagragh{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUpFour{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+    
+}
+
+.reduxLogo{
+    height: 60px;
+}
+
+.popUpDivFive{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+
+}
+
+.reduxParagraph{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUpFive{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+}
+
+.chaiLogo{
+    height: 60px;
+}
+
+.popUpDivSix{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+
+}
+
+.chaiParagraph{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUpSix{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+}
+
+.jestLogo{
+    height: 60px;
+}
+
+
+.popUpDivSeven{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+
+}
+
+.jestParagraph{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUpSeven{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+}
+
+.mochaLogo{
+    height: 60px;
+}
+
+
+.popUpDivEight{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+
+}
+
+.mochaParagraph{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUpEight{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+}
+
+.gitLogo{
+    height: 60px;
+}
+
+
+.popUpDivNine{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; 
+    position: absolute;
+    left:-30%;
+    opacity: 0;
+
+}
+
+.gitParagraph{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.popUpNine{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 50px;
+}
 
 @keyframes --hiddenMenu-animation{
     0%{
@@ -589,18 +1010,26 @@ a{
 }
 
 @media(max-width:1619px){
+    .navBarBackground{
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        z-index: 3;
+        position: fixed;
+        top: 0;
+    }
     .humburger-Menu{
         bottom: 220px;
     }
     .navbar{
         display: none;
     }
-    .editdooImage,.editdooFaqSec,.editdooWorkSec{
+    .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree{
         width: 70vw;
         border-radius: 20px;
     }
 
-    .editdooDescription{
+    .editdooDescription,.jammmingDescription{
         width: 170%;
         align-content: center;
         justify-items: center;
@@ -616,7 +1045,7 @@ a{
         font-size: xxx-large;
     }
 
-    .editdooTitle{
+    .editdooTitle,.jammmingTitle{
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
@@ -652,11 +1081,15 @@ a{
 }
 @media (max-width: 1179px){
     .manProfilePic{
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 8%;
-        width: 20vw;
+        width:300px;
+        height: 100%;
+        margin-right: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-self:center ;
+        
     }
+    
     .aboutMe h2{
         margin:auto;
         font-size: clamp(1.5rem,3.15vw + 0.9rem,10rem) ;
@@ -667,7 +1100,7 @@ a{
     }
 }
 @media (max-width: 680px){
-    .portfolioButtonRight,.portfolioButtonLeft{
+    .portfolioButtonRight,.portfolioButtonLeft,.jammmingPortfolioButtonLeft,.jammmingPortfolioButtonRight{
         height: 23px;
     }
     .heading{
@@ -706,7 +1139,7 @@ a{
         font-size: 0.7rem;
         border: solid 2px #383635;
     }
-    .editdooTitle{
+    .editdooTitle,.jammmingTitle{
         font-size: x-large;
         margin-bottom: 1rem;
     }
@@ -716,11 +1149,11 @@ a{
         margin:auto
     }
     
-    .editdooImage,.editdooFaqSec,.editdooWorkSec{
+    .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree{
         border-radius: 15px;
         width: 77vw;
     }
-    .editdooDescription{
+    .editdooDescription,.jammmingDescription{
         width: 170%;
       
     }
@@ -736,6 +1169,16 @@ a{
     }
     .aboutMe{
         font-size: 0.7rem;
+    }
+
+    .manProfilePic{
+        width:200px;
+        height: 100%;
+        margin-right: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-self:center ;
+        
     }
 
 }

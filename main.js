@@ -6,6 +6,20 @@ location.hash = "";
 const humburger = document.querySelector(".humburger-Menu ");
 const hiddenMenu = document.querySelector(".hiddenMenu");
 
+let arrayOfPorfolioWork = [
+  {
+    nameOfproject:"Editdoo",
+    imagesOfProject:["./Resources/editdoo.png","./Resources/form.png","./Resources/faqs.png"],
+    leftArrow:"./Resources/portfolio button left.svg",
+    rightArrow:"./Resources/portfolio button right.svg",
+    descriptionParagraph:"Editdoo is a comprehensive website offering premium motion design and video editing services to customers.We specialize in transforming ideas into captivating visual content that engages and inspires audiences. Catering to a diverse range of industries,our platform offers tailored solutions designed to elevate your brand’s presence.<br><br>Technologies:HTML,CSS and Javascript",
+    tryDemo:"https://editdoo-motion-design.vercel.app/index.html",
+    viewCode:"https://github.com/junluck/Editdoo_Motion-design"
+  }
+]
+
+
+
 // Toggle the "active" class on the hamburger menu and hidden menu when the hamburger menu is clicked
 humburger.addEventListener("click", () =>{
     humburger.classList.toggle("active");
@@ -146,9 +160,14 @@ const rightArrow = document.querySelector(".portfolioButtonRight");
 const leftArrow = document.querySelector(".portfolioButtonLeft");
 const arrayOfPictures = [document.querySelector(".editdooImage"), document.querySelector(".editdooWorkSec"),document.querySelector(".editdooFaqSec")];
 const arrayOfCircles = [document.querySelector(".firstCircle"), document.querySelector(".secondCircle"), document.querySelector(".thirdCircle")];
+const rightArrowJammming = document.querySelector(".jammmingPortfolioButtonRight");
+const leftArrowJammming = document.querySelector(".jammmingPortfolioButtonLeft");
+const arrayOfPicturesJammming = [document.querySelector(".jammmingImage"), document.querySelector(".jammmingImageTwo"),document.querySelector(".jammmingImageThree")];
+const arrayOfCirclesJammming = [document.querySelector(".jammmingfirstCircle"), document.querySelector(".jammmingsecondCircle"), document.querySelector(".jammmingthirdCircle")];
 
 // Initialize the slider functionality with the right and left arrows and the array of pictures
 eventListenerForSlider(rightArrow, leftArrow, arrayOfPictures, arrayOfCircles );
+eventListenerForSlider(rightArrowJammming, leftArrowJammming, arrayOfPicturesJammming, arrayOfCirclesJammming );
 
 
 // Function to append a project heading to the projects div
@@ -166,6 +185,7 @@ const observer = new IntersectionObserver(entries =>{
   {
     if(entry.isIntersecting)
     {
+      observer.unobserve(entry.target)
         entry.target.animate(
           [
 
@@ -193,10 +213,12 @@ const observer = new IntersectionObserver(entries =>{
   const animateTwoElementsIn = new IntersectionObserver(entries =>
     {
     entries.forEach(entry =>
-      {
+      { ;
+        console.log(entry)
       if(entry.isIntersecting)
         {
-
+         
+          console.log(entry.target)
         entry.target.animate
         (
           [
@@ -238,17 +260,34 @@ const observer = new IntersectionObserver(entries =>{
     })
 
 // Storing DOM elements in variables
-const portfolio = document.querySelector(".portfolioHeading");
-const editdooTitle = document.querySelector(".editdooTitle");
-const editdooImage = document.querySelector(".buttonAndImage");
-const aboutMeHeading = document.querySelector(".aboutMeHead");
-const aboutParagraph = document.querySelector(".aboutMeDescription");
-//Invoke observe method on elements
-observer.observe(portfolio);
-observer.observe(editdooTitle);
-observer.observe(aboutMeHeading);
-observer.observe(aboutParagraph);
-animateTwoElementsIn.observe(editdooImage);
+let arrayOfNameOfTechs = [document.querySelector(".popUpDiv"),document.querySelector(".popUpDivTwo"),document.querySelector(".popUpDivThree"),document.querySelector(".popUpDivFour"),document.querySelector(".popUpDivFive"),document.querySelector(".popUpDivSix"),document.querySelector(".popUpDivSeven"),document.querySelector(".popUpDivEight"),document.querySelector(".popUpDivNine")]
+let arrayOfLogos = [document.querySelector(".javascriptPic"),document.querySelector(".cssLogo"),document.querySelector(".htmlLogo"),document.querySelector(".reactLogo"),document.querySelector(".reduxLogo"),document.querySelector(".chaiLogo"),document.querySelector(".jestLogo"),document.querySelector(".mochaLogo"),document.querySelector(".gitLogo")]
+
+function arrayListner(array,arrayTwo){
+  array.forEach((element,index)=>{
+    element.addEventListener("mouseover",(e)=>{
+      arrayTwo[index].style.opacity = "1";
+    })
+    element.addEventListener("mouseout",(e)=>{
+      arrayTwo[index].style.opacity = "0";
+    })
+  })
+}
+
+arrayListner(arrayOfLogos,arrayOfNameOfTechs)
+ 
+const profilePic = document.querySelector(".manProfilePic")
+const  profilePicTwo = document.querySelector(".manProfilePicTwo")
+
+profilePic.addEventListener("mouseover",(e)=>{
+  e.target.style.opacity = "0" 
+})
+
+profilePic.addEventListener("mouseout",(e)=>{
+  e.target.style.opacity = "1" 
+})
 
 
-
+module.exports = {
+  animateTwoElementsIn
+}
