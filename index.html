@@ -13,6 +13,16 @@
         <link rel = "icon" type="image/svg" sizes="any" href="./Resources/favicon.svg">
         <title>Junain Davids</title>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "Lk31u78Rctmd3kgAc",
+                });
+            })();
+            </script>
     </head>
     <body>
         <header>
@@ -208,11 +218,41 @@
                         </div>
                     </div>
             </article>
-
+            <article class="resumeSection" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="600">
+                <h2 class="resumeTitle">Resume</h2>
+                <div class = "buttonsTwo">
+                    <a href = "Resources/Junain-Davids-Resume___.pdf" target="_blank"><h4 class = "viewResume">VIEW RESUME</h4></a>
+                    <a href = "Resources/Junain-Davids-Resume___.pdf" download><h4 class = "downloadResume">DOWNLOAD RESUME</h4></a>
+  
+                </div>
+             
+            </article>
+            <article class="contactSection" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="600">
+                <h2 class="resumeTitle">Contact Form</h2>
+                <form class="contactForm">
+                    <div class="name">
+                        <input placeholder="Enter your name" type="text" name="name" id="name" required>
+                        <span class="underlineBlack"></span>
+                    </div>
+                    <div class="email">
+                        <input placeholder="Enter your email" type="email"  name="email" id="email" required>
+                        <span class="underlineBlack"></span>
+                    </div>
+                    <div class="message">
+                        <textarea rows="3" name="message" id="message"  placeholder="Enter your message" required></textarea>
+                        <span class="underlineBlack"></span>
+                    </div>
+                    <button type="submit" name="submit"  id="submit">Send Message</button>
+                </form>
+            </article>
 
         </main>
-        <footer>
-            <span></span>
+        <footer class="footer">
+           <div class="footerLogos">
+                <a href = "mailto:junaindavidsvickerman@gmail.com" ><img src="Resources/Message logo.svg" class="messageLogo"></a>
+                <a  href = "https://www.linkedin.com/in/junain-d-563b10129/" target = "_blank"><img src="Resources/LinkedIn.svg" class="linkedinLogo"></a>
+                <a href = "https://github.com/junluck" target = "_blank"><img src="Resources/github-logo.svg" class="githubLogo"></a>
+            </div>
         </footer>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>

@@ -287,6 +287,32 @@ profilePic.addEventListener("mouseout",(e)=>{
   e.target.style.opacity = "1" 
 })
 
+const form = document.querySelector(".contactForm");
+const name = document.getElementById("name");
+
+form.addEventListener("submit",(event)=>{
+  const formData = new FormData(form)
+  const data = Object.fromEntries(formData)
+  event.preventDefault()
+  // function that sends email 
+  function sendMail(){
+      let params = data
+
+
+      emailjs.send("service_ouim9y7","template_14safte", params).then(()=>{
+
+      }).catch((e)=>{
+          console.log("error has occured")
+      })
+      }
+      
+      sendMail()
+      
+      event.target[0].value = "";
+      event.target[1].value = "";
+      event.target[2].value = "";
+     
+  })
 
 module.exports = {
   animateTwoElementsIn

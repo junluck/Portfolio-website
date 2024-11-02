@@ -444,8 +444,46 @@ a{
     cursor: pointer;
 }
 
+.viewResume,.downloadResume{
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 20%;
+    min-width: 150px;
+    font-weight: 600;
+    font-size:0.6rem;
+    border: solid 2px #383635;
+    cursor: pointer;
+}
 
+.viewResume::after{
+    content: "";
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    background: url("./Resources/viewdOC.svg") no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+}
 
+.resumeSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.downloadResume::after{
+    content: "";
+    display: inline-block;
+    min-width: 30px;
+    min-height: 30px;
+    background: url("./Resources/download icon.svg") no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+}
 .viewCode::after,.jammmingViewCode::after{
     content: "";
     display: inline-block;
@@ -553,7 +591,7 @@ a{
     align-items: center;
     flex-direction: column;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .technologyOne{
@@ -564,13 +602,7 @@ a{
     height: 100%;
 
 }
-.groupOfTechs{
-    margin-top: 0px;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-column-gap: 10px;
-}
+
 .technology{
     grid-row-start: 1;
     grid-row-end: 4;
@@ -942,6 +974,194 @@ a{
     height: 50px;
 }
 
+.buttonsTwo{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+}
+.resumeSection{
+    margin-top: 0px;
+}
+
+.resumeTitle{
+    font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
+}
+
+.contactSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactForm{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 40% 20%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height:400px
+}
+
+.name{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.underlineBlack{
+    background-color: #383635;
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.email{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#name{
+   border: none;
+   text-align: center;
+   width: 100%;
+   font-size: 1.1rem;
+    font-family: "lato";
+   color: #383635;
+}
+#name:focus{
+    border: none;
+    outline: none;
+    
+ }
+ #name::placeholder{
+    font-size: 1.1rem;
+    font-family: "lato";
+
+ }
+#email{
+    border: none;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: "lato";
+    color: #383635;
+
+}
+
+#email:focus{
+    border: none;
+    outline: none;
+ }
+ #email::placeholder{
+    font-size: 1.1rem;
+    font-family: "lato";
+ }
+
+#message{
+    border: none;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+    font-family: "lato";
+    color: #383635;
+
+}
+
+#message:focus{
+    border: none;
+    outline: none;
+ }
+ #message::placeholder{
+    font-size: 1.1rem;
+    font-family: "lato";
+ }
+#submit{
+    background-color: transparent;
+    border: solid 2px;
+    color: #383635;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    font-family: "lato";
+    color: #383635;
+    cursor: pointer;
+    justify-self: center;
+    align-self: start;
+    font-size: 1rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    
+}
+.footerLogos{
+    display: flex;
+    
+}
+
+.messageLogo{
+    height: 25px;
+    width: 30px;
+    margin-right: 40px;
+    cursor: pointer;
+    transition: scale 400ms ease;
+}
+
+
+.linkedinLogo{
+    height: 25px;
+    width: 40px;
+    cursor: pointer;
+    transition: scale 400ms ease;
+
+}
+
+.githubLogo{
+    height: 25px;
+    width: 30px;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: scale 400ms ease;
+
+
+}
+
+
+.messageLogo:hover{
+   scale: 1.1;
+}
+
+
+.linkedinLogo:hover{
+  scale: 1.1;
+
+}
+
+.githubLogo:hover{
+scale: 1.1;
+
+
+}
 @keyframes --hiddenMenu-animation{
     0%{
         opacity: 0;
@@ -1007,8 +1227,66 @@ a{
     .hiddenMenu{
         display: none;
     }
+
+    .groupOfTechs{
+        margin-top: 0px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-column-gap: 10px;
+    }
+}
+@media(min-width:830px) and (max-width:1619px){
+    .groupOfTechs{
+        margin-top: 0px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+        grid-column-gap: 10px;
+    }
 }
 
+@media(min-width:450px) and (max-width:829px){
+   .technologyOne{
+    margin-top: 40px;
+   }
+}
+
+@media(min-width:320px) and (max-width:449px){
+    .technologyOne{
+        width: 320px;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .technology{
+        width: 100%;
+        height: 100%;
+    }
+    .Front-End{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        color: white;
+        z-index: 2;
+        justify-self: center;
+        align-self: start;
+        margin-top: 3px;
+      }
+      .manProfilePic{
+        width: 200px;
+        height: 200px;
+      }
+      .aboutMeDescription{
+        transform:translateY(0px);
+    
+        display: grid;
+        
+        grid-column-gap: 30px;
+        margin:0 ;
+    }
+    .cssLogo{}
+ }
 @media(max-width:1619px){
     .navBarBackground{
         background-color: white;
@@ -1056,6 +1334,12 @@ a{
     .aboutMe h2{
         font-size: xxx-large;
     }
+
+    .resumeTitle{
+        font-size: xxx-large;
+
+    }
+    
     
 }
 
@@ -1089,6 +1373,15 @@ a{
         justify-self:center ;
         
     }
+
+    .manProfilePicTwo{
+        width:300px;
+        height: 100%;
+        margin-right: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        justify-self:center ;
+    }
     
     .aboutMe h2{
         margin:auto;
@@ -1097,6 +1390,15 @@ a{
 
     
     
+    }
+
+    .resumeTitle{
+        font-size: clamp(1.5rem,3.15vw + 0.9rem,10rem) ;
+
+    }
+
+    .aboutMeDescription{
+        row-gap: 20px;
     }
 }
 @media (max-width: 680px){
@@ -1148,6 +1450,11 @@ a{
         font-size: xx-large;
         margin:auto
     }
+
+    .resumeTitle{
+        font-size: xx-large;
+
+    }
     
     .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree{
         border-radius: 15px;
@@ -1171,14 +1478,6 @@ a{
         font-size: 0.7rem;
     }
 
-    .manProfilePic{
-        width:200px;
-        height: 100%;
-        margin-right: 0px;
-        margin-top: auto;
-        margin-bottom: auto;
-        justify-self:center ;
-        
-    }
+ 
 
 }
