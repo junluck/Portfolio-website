@@ -418,11 +418,14 @@ a{
     line-height: 140%;
     margin-top: 0;
     transform:translateY(40px);
+    display: grid;
+    grid-template-columns: 100%;
    
 }
 .buttons,.jammmingbuttons{
     display: flex;
     flex-direction: row;
+    justify-self: start;
 }
 
 .viewCode,.jammmingViewCode{
