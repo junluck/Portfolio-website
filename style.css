@@ -442,7 +442,7 @@ a{
     width: 20%;
     min-width: 110px;
     font-weight: 600;
-    font-size:clamp(0.8rem,0.55vw + 0.2rem,3rem) ;
+    font-size:0.8rem ;
     border: solid 2px #383635;
     cursor: pointer;
 }
@@ -1005,7 +1005,8 @@ a{
     align-items: center;
     flex-direction: column;
     width: 30%;
-    height:400px
+    height:500px;
+    max-width: 400px;
 }
 
 .name{
