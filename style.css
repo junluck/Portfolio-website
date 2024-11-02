@@ -1253,11 +1253,15 @@ scale: 1.1;
    .technologyOne{
     margin-top: 40px;
    }
+
+   .contactForm{
+    width: 50%;
+}
 }
 
 @media(min-width:320px) and (max-width:449px){
     .technologyOne{
-        width: 320px;
+        width: 315px;
         height: 100%;
         margin-top: 30px;
     }
@@ -1289,6 +1293,11 @@ scale: 1.1;
         margin:0 ;
     }
     .cssLogo{}
+
+    
+   .contactForm{
+    width: 60%;
+}
  }
 @media(max-width:1619px){
     .navBarBackground{
@@ -1298,6 +1307,7 @@ scale: 1.1;
         z-index: 3;
         position: fixed;
         top: 0;
+        left: 0%;
     }
     .humburger-Menu{
         bottom: 220px;
