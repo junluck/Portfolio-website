@@ -271,7 +271,7 @@ a{
     grid-area: portfolio;
     justify-self: center;
     align-self: center;
-    font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
+    font-size: clamp(1.5rem,3.15vw + 0.5rem,6rem) ;
     margin-top:5%;
     
 
@@ -291,7 +291,7 @@ a{
 
 .editdooTitle,.jammmingTitle{
     margin-bottom: 2%;
-    font-size: clamp(1rem,2.15vw + 0.1rem,10rem);
+    font-size: clamp(1rem,2.15vw + 0.1rem,4rem);
     transform:translateY(40px);
     
 
@@ -414,12 +414,13 @@ a{
 }
 
 .editdooDescription,.jammmingDescription{
-    font-size: clamp(1rem,1vw + 0.1rem,10rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,4rem) ;
     line-height: 140%;
     margin-top: 0;
     transform:translateY(40px);
     display: grid;
     grid-template-columns: 100%;
+    max-width: 1920px;
    
 }
 .buttons,.jammmingbuttons{
@@ -567,7 +568,7 @@ a{
 }
 .aboutMe h2{
     margin-bottom: 2rem;
-    font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
+    font-size: clamp(1.5rem,3.15vw + 0.5rem,5rem) ;
 
     transform:translateY(40px);
   
@@ -576,7 +577,7 @@ a{
 
 
 .aboutMe p{
-    font-size: clamp(1rem,1vw + 0.1rem,10rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,4rem) ;
     line-height: 140%;
     margin:auto;
 
@@ -987,7 +988,7 @@ a{
 }
 
 .resumeTitle{
-    font-size: clamp(1.5rem,3.15vw + 0.5rem,10rem) ;
+    font-size: clamp(1.5rem,3.15vw + 0.5rem,5rem) ;
 }
 
 .contactSection{
