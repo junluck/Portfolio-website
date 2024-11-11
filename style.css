@@ -577,7 +577,7 @@ a{
 
 
 .aboutMe p{
-    font-size: clamp(1rem,1vw + 0.1rem,4rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,3rem) ;
     line-height: 140%;
     margin:auto;
 
@@ -1223,6 +1223,85 @@ scale: 1.1;
     
 }
 
+@media(min-width: 3000px){
+    .portfolioButton{
+        width: max(15rem,12%);
+        height: 5rem;
+        font-size:1.8rem ;
+        border-radius: 60px;
+    }
+
+    .viewCode, .tryDemo, .jammmingTryDemo, .jammmingViewCode{
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        width: 30%;
+        min-width: 210px;
+        font-weight: 600;
+        font-size: 1.3rem;
+        border: solid 2px #383635;
+        cursor: pointer;
+    }
+
+    .viewCode::after,.jammmingViewCode::after{
+        content: "";
+        display: inline-block;
+        min-width: 30px;
+        min-height: 30px;
+        background: url("./Resources/github-seeklogo.svg") no-repeat;
+        background-size: contain;
+        margin-left: 8px;
+    }
+    
+    .tryDemo::after,.jammmingTryDemo::after{
+        content: "";
+        display: inline-block;
+        min-width: 27px;
+        min-height: 27px;
+        background: url("./Resources/externallink2.svg") no-repeat;
+        background-size: contain;
+        margin-left: 8px;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+
+    .viewResume,.downloadResume{
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        width: 250px;
+        min-width: 150px;
+        font-weight: 600;
+        font-size:1.2rem;
+        border: solid 2px #383635;
+        cursor: pointer;
+    }
+    
+    .viewResume::after{
+        content: "";
+        display: inline-block;
+        min-width: 20px;
+        min-height: 20px;
+        background: url("./Resources/viewdOC.svg") no-repeat;
+        background-size: contain;
+        margin-left: 5px;
+    }
+    
+    
+    .downloadResume::after{
+        content: "";
+        display: inline-block;
+        min-width: 30px;
+        min-height: 30px;
+        background: url("./Resources/download icon.svg") no-repeat;
+        background-size: contain;
+        margin-left: 5px;
+    }
+}
 
 @media(min-width:1620px){
     .humburger-Menu{
