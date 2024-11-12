@@ -1494,7 +1494,7 @@ scale: 1.1;
     }
     
     .aboutMe h2{
-        margin:auto;
+        
         font-size: clamp(1.5rem,3.15vw + 0.9rem,10rem) ;
     
 
@@ -1558,7 +1558,8 @@ scale: 1.1;
 
     .aboutMe h2{
         font-size: xx-large;
-        margin:auto
+        margin-bottom: 1rem;
+        
     }
 
     .resumeTitle{
