@@ -142,7 +142,7 @@ html{
 }
 .hiddenMenu li{
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 5%;
     -webkit-tap-highlight-color: transparent;
     transition: transform 300ms ease;
 
@@ -1377,8 +1377,24 @@ scale: 1.1;
 
     
    .contactForm{
-    width: 60%;
-}
+        width: 60%;
+    }
+
+    .viewCode,.tryDemo,.jammmingTryDemo,.jammmingViewCode{
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        width: 10%;
+        min-width: 90px;
+        font-weight: 600;
+        font-size:0.6rem ;
+        border: solid 2px #383635;
+        cursor: pointer;
+    }
+
+
  }
 @media(max-width:1619px){
     .navBarBackground{
