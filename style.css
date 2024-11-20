@@ -240,7 +240,10 @@ a{
 }
 
 
-
+.thankYou{
+    font-size: 1.4rem;
+    display: none;
+}
 
 .portfolioButton:hover{
     

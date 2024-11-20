@@ -289,7 +289,7 @@ profilePic.addEventListener("mouseout",(e)=>{
 
 const form = document.querySelector(".contactForm");
 const name = document.getElementById("name");
-
+const thankYou =  document.querySelector(".thankYou"); 
 form.addEventListener("submit",(event)=>{
   const formData = new FormData(form)
   const data = Object.fromEntries(formData)
@@ -307,12 +307,16 @@ form.addEventListener("submit",(event)=>{
       }
       
       sendMail()
-      
+      thankYou.style.display = "flex"
       event.target[0].value = "";
       event.target[1].value = "";
       event.target[2].value = "";
      
   })
+
+  form.addEventListener("click",(event)=>{
+        thankYou.style.display = "none"
+    })
 
 module.exports = {
   animateTwoElementsIn
