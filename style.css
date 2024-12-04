@@ -14,6 +14,8 @@ html{
     z-index: 1;
     z-index: 3;
     
+    grid-template-rows: 60px;
+    
 }
 
 .navbar{
@@ -25,9 +27,65 @@ html{
     margin-right: 1rem;
     font-size: 0.9rem;
     background-color: #ffffff;
+    grid-row-start: 1;
+    grid-row-end:2 ;
+   
+    align-self: center;
     
     
 }
+
+.logoGroup,.logoGroupTwo{
+    
+    margin-left: 10px;
+    
+    display: grid;
+    grid-template-columns: 50px;
+    grid-template-rows: 100%;
+    cursor: pointer;
+    width:50px
+
+}
+
+.logoGroupTwo{
+    height:60px;
+}
+#heading{
+    position: absolute;
+    top: 0%;
+}
+.anchorLogotwo,.anchorLogo{
+    grid-row-start: 1;
+    grid-row-end:2 ;
+    align-self: center
+}
+
+.logoGroup img, .logoGroup h3, .logoGroupTwo img, .logoGroupTwo h3{ 
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.logoGroup h3 , .logoGroupTwo h3{
+  z-index: 2;
+  font-size: 1.8rem;
+}
+.logoActive{
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.logoActiveTwo{
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
 
 .navbar li{
     display: flex;
@@ -59,17 +117,16 @@ html{
 
 }
 
-
+header{
+    width: 100%;
+}
 .navbar a{
     text-decoration: none;
     color: inherit;
 }
 .hum{
-    
-    display:flex;
+    display: flex;
     position: fixed;
-    margin-left: 98%;
-    margin-top: -1%;
     z-index: 3;
    
 }
@@ -77,13 +134,25 @@ html{
 .humburger-Menu{
     position: relative;
     display: flex;
-    right: 30px;
     height: 40px;
     width: 40px;
-    bottom: 20px;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;  
+
     
+}
+.anchorLogo{
+
+}
+.anchorLogotwo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    position: fixed;
+    top: 0%;
+    height: 60px;
+  
 }
 
 .humburger-Menu span{
@@ -123,7 +192,8 @@ html{
 }
 
 .hiddenMenu{
-    display: flex;
+    display: grid;
+    grid-template-rows: 13% 13% 13% 13% 13%;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -142,7 +212,7 @@ html{
 }
 .hiddenMenu li{
     cursor: pointer;
-    margin-top: max(10vh,45px);
+    margin-top: max(10vh,75px);
     -webkit-tap-highlight-color: transparent;
     transition: transform 300ms ease;
 
@@ -1170,6 +1240,11 @@ scale: 1.1;
 
 
 }
+
+.logoDeactive{
+    width: 50px;
+}
+
 @keyframes --hiddenMenu-animation{
     0%{
         opacity: 0;
@@ -1322,7 +1397,22 @@ scale: 1.1;
         grid-template-rows: 100%;
         grid-column-gap: 10px;
     }
+    .anchorLogotwo{
+        display: none;
+    }
+
+    .main-nav{
+        display: grid;
+        
+    }
 }
+
+@media(max-width:1619px){
+    .anchorLogo{
+        display: none;
+    }
+}
+
 @media(min-width:830px) and (max-width:1619px){
     .groupOfTechs{
         margin-top: 0px;
@@ -1403,14 +1493,14 @@ scale: 1.1;
     .navBarBackground{
         background-color: white;
         width: 100%;
-        height: 50px;
+        height: 60px;
         z-index: 3;
         position: fixed;
         top: 0;
         left: 0%;
     }
     .humburger-Menu{
-        bottom: 220px;
+        
     }
     .navbar{
         display: none;
@@ -1471,7 +1561,32 @@ scale: 1.1;
         grid-column-end:3 ;
     }
     
+    .anchorLogotwo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        height: 60px;
+    }
     
+    .hum{
+        margin-left: 95%;
+        
+    }
+    .humburger-Menu{
+        bottom: 235px;
+        
+    }
+    .aboutMe{
+        font-size: 0.7rem;
+    }
+
+    .logoGroup{
+        height: 60PX;
+    }
 
    
 
@@ -1513,6 +1628,34 @@ scale: 1.1;
     .aboutMeDescription{
         row-gap: 20px;
     }
+
+    .anchorLogotwo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        height: 60px;
+    }
+    
+    .hum{
+        margin-left: 90%;
+        
+    }
+    .humburger-Menu{
+        bottom: 235px;
+    }
+    .aboutMe{
+        font-size: 0.7rem;
+    }
+
+    .logoGroup{
+        height: 60PX;
+    }
+
+   
 }
 @media (max-width: 680px){
     .portfolioButtonRight,.portfolioButtonLeft,.jammmingPortfolioButtonLeft,.jammmingPortfolioButtonRight{
@@ -1582,16 +1725,30 @@ scale: 1.1;
     .hiddenMenu.active{
         right: -55%;
     }
+    .anchorLogotwo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        height: 60px;
+    }
+    
     .hum{
-        margin-left: 95%;
+        margin-left: 90%;
+        
     }
     .humburger-Menu{
-        bottom: 210px;
+        bottom: 220px;
     }
     .aboutMe{
         font-size: 0.7rem;
     }
 
- 
+    .logoGroup{
+        height: 60PX;
+    }
 
 }

@@ -318,6 +318,31 @@ form.addEventListener("submit",(event)=>{
         thankYou.style.display = "none"
     })
 
-module.exports = {
-  animateTwoElementsIn
-}
+
+const logoDiv = document.querySelector(".logoGroup");
+const logo = document.querySelector(".logoActive")
+const logoDivTwo= document.querySelector(".logoGroupTwo");
+const logoTwo= document.querySelector(".logoActiveTwo")
+logoDiv.addEventListener("mouseover",()=>{
+  logo.style.opacity= "1"
+  console.log("touch")
+
+})
+
+logoDiv.addEventListener("mouseout",()=>{
+   logo.style.opacity= "0"
+  console.log("touch")
+
+})
+
+logoDivTwo.addEventListener("mouseover",()=>{
+  logoTwo.style.opacity= "1"
+  console.log("touch")
+
+})
+
+logoDivTwo.addEventListener("mouseout",()=>{
+  logoTwo.style.opacity= "0"
+  console.log("touch")
+
+})
