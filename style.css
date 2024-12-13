@@ -674,7 +674,7 @@ a{
     margin: auto;
     padding: 0;
     width: 50%; 
-    max-width: 2200px;
+    max-width: 1920px;
 }
 .aboutMe h2{
     margin-bottom: 2rem;
@@ -1463,7 +1463,7 @@ scale: 1.1;
     }
     .aboutMe{
         width: 50%;
-        max-width: 1500px;
+        max-width: 1920px;
        
     }
 }
@@ -1813,7 +1813,7 @@ scale: 1.1;
        
     }
     .aboutMeDescription{
-        max-width: 1900px;
+        max-width: 1050px;
     }
 }
 @media (max-width: 1179px){
