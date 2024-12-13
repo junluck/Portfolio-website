@@ -687,7 +687,7 @@ a{
 
 
 .aboutMe p{
-    font-size: clamp(1.2rem,1vw + 0.1rem,3rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,3rem) ;
     line-height: 140%;
     
 
@@ -1500,6 +1500,23 @@ scale: 1.1;
         grid-row-end: 3;
        
     }
+
+    .aboutMe p{
+        font-size: 1.4rem;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .aboutMe{
+        width: 60%;
+       
+    }
+
+    .manProfilePic,.manProfilePicTwo{
+        width: 300px;
+        height: 280px;
+
+    }
 }
 
 @media(min-width:450px) and (max-width:829px){
@@ -1536,24 +1553,30 @@ scale: 1.1;
 
    .contactForm{
     width: 50%;
-}
+    }
 
 
-.editdooDescription,.jammmingDescription{
-    font-size: 1.2rem ;
-    line-height: 140%;
-    margin-top: 0;
-    transform:translateY(40px);
-    display: grid;
-    grid-template-columns: 100%;
-    max-width: 1920px;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-   
-}
+    .editdooDescription,.jammmingDescription{
+        font-size: 1.2rem ;
+        line-height: 140%;
+        margin-top: 0;
+        transform:translateY(40px);
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 1920px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    
+    }
+    .aboutMe{
+        width: 70%;
+    }
 
+    .aboutMe p{
+        font-size: 1.2rem;
+    }
 }
 
 @media(min-width:320px) and (max-width:449px){
@@ -1653,6 +1676,21 @@ scale: 1.1;
        
     }
 
+    .editdooDescription,.jammmingDescription{
+        font-size: 1rem ;
+        line-height: 140%;
+        margin-top: 0;
+        transform:translateY(40px);
+        display: grid;
+        grid-template-columns: 100%;
+        max-width: 1920px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    
+    }
+
  }
 @media(max-width:1619px){
     .navBarBackground{
@@ -1699,7 +1737,7 @@ scale: 1.1;
     }
 
     .aboutMe{
-        width: 70%;
+        
     }
     .aboutMe h2{
         font-size: xxx-large;
@@ -1716,6 +1754,7 @@ scale: 1.1;
 @media (min-width: 1180px){
     .aboutMeDescription{
         grid-template-columns: auto auto;
+       
     }
 
     .manProfilePic{
@@ -1726,8 +1765,7 @@ scale: 1.1;
     .aboutMe p{
         grid-column-start: 2;
         grid-column-end:3 ;
-        justify-self: center;
-        align-self: center;
+        
     }
     
     .anchorLogotwo{
@@ -1750,7 +1788,7 @@ scale: 1.1;
         
     }
     .aboutMe{
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     .logoGroup{
@@ -1772,7 +1810,8 @@ scale: 1.1;
         grid-row-end: 3;
         justify-self: center;
         align-self: center;
-        margin-left: 20px;
+        margin-left: 0px;
+        width: 100%;
     }
     .manProfilePic{
         width:300px;
@@ -1829,15 +1868,12 @@ scale: 1.1;
     .humburger-Menu{
         bottom: 235px;
     }
-    .aboutMe{
-        font-size: 0.7rem;
-    }
-
+    
     .logoGroup{
         height: 60PX;
     }
 
-   
+    
 
   
 
@@ -1928,10 +1964,7 @@ scale: 1.1;
     .humburger-Menu{
         bottom: 220px;
     }
-    .aboutMe{
-        font-size: 0.7rem;
-    }
-
+   
     .logoGroup{
         height: 60PX;
     }
