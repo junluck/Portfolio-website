@@ -520,7 +520,7 @@ a{
 }
 
 .editdooDescription,.jammmingDescription{
-    font-size: clamp(1rem,1vw + 0.1rem,4rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,2rem) ;
     line-height: 140%;
     margin-top: 0;
     transform:translateY(40px);
@@ -693,7 +693,7 @@ a{
 
 
 .aboutMe p{
-    font-size: clamp(1rem,1vw + 0.1rem,3rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,2rem) ;
     line-height: 140%;
     
 
