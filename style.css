@@ -1455,6 +1455,17 @@ scale: 1.1;
         display: grid;
         
     }
+
+    .manProfilePic,.manProfilePicTwo{
+        width: 300px;
+        height: 280px;
+
+    }
+    .aboutMe{
+        width: 50%;
+        max-width: 1500px;
+       
+    }
 }
 
 @media(max-width:1619px){
