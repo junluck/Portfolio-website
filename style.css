@@ -565,13 +565,19 @@ a{
     align-items: center;
     border-radius: 30px;
     width: 20%;
-    min-width: 150px;
+    min-width: 140px;
     font-weight: 600;
     font-size:0.6rem;
     border: solid 2px #383635;
     cursor: pointer;
 }
+.viewResume{
+    margin-right: 10px;
+}
 
+.downloadResume{
+    margin-left: 10px;
+}
 .viewResume::after{
     content: "";
     display: inline-block;
@@ -706,6 +712,8 @@ a{
     flex-direction: column;
     margin-top: 100px;
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .technologyOne{
@@ -1091,7 +1099,7 @@ a{
 .buttonsTwo{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-column-gap: 10px;
+    grid-column-gap: 0px;
 }
 .resumeSection{
     margin-top: 0px;
@@ -1458,7 +1466,7 @@ scale: 1.1;
 
     .manProfilePic,.manProfilePicTwo{
         width: 300px;
-        height: 280px;
+        height: 250px;
 
     }
     .aboutMe{
@@ -1525,7 +1533,7 @@ scale: 1.1;
 
     .manProfilePic,.manProfilePicTwo{
         width: 300px;
-        height: 280px;
+        height: 250px;
 
     }
 }
@@ -1606,9 +1614,10 @@ scale: 1.1;
     }
     
     .technologyOne{
-        width: 315px;
+        width: 300px;
         height: 100%;
         margin-top: 30px;
+        
     }
     .technology{
         width: 100%;
@@ -1765,7 +1774,7 @@ scale: 1.1;
     
 }
 
-@media (min-width: 1180px){
+@media (min-width: 1380px){
     .aboutMeDescription{
         grid-template-columns: auto auto;
        
@@ -1816,7 +1825,7 @@ scale: 1.1;
         max-width: 1050px;
     }
 }
-@media (max-width: 1179px){
+@media (max-width: 1379px){
     .aboutMe p {
         grid-column-start: 1;
         grid-column-end: 2;
