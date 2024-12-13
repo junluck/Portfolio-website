@@ -688,7 +688,7 @@ a{
 
 
 .aboutMe p{
-    font-size: clamp(1rem,1vw + 0.1rem,2rem) ;
+    font-size: clamp(1rem,1vw + 0.1rem,1.6rem) ;
     line-height: 140%;
     
 
