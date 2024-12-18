@@ -244,7 +244,7 @@ header{
 }
 
 .mainHeading{
-    font-size: clamp(2.5em,3.15vw + 0.2rem,10rem);
+    font-size: clamp(2.5em,3.15vw + 0.2rem,6rem);
     font-weight: 600;
     margin: 0;
     animation: --heading-animation 950ms ease-out;
@@ -269,6 +269,10 @@ header{
 }
 .button{
     z-index: 1;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -289,7 +293,7 @@ header{
 
 .fullStackDev{
     margin: 0;
-    font-size: clamp(2.5rem,3.15vw + 0.2rem,10rem);
+    font-size: clamp(2.5rem,3.15vw + 0.2rem,6rem);
     font-weight: 600;
     animation: --fullStackDev-animation 950ms ease-out ;
     animation-fill-mode: forwards;
@@ -306,10 +310,16 @@ a{
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
-
+.button a{
+    width: 100%;
+    
+    display: grid;
+    justify-content: center;
+    align-items: end;
+}
 .portfolioButton{
     border: solid 4px #383635;
-    width: max(10rem,12%);
+    width: 150px;
     height: 3.5rem;
     display: flex;
     align-items: center;
@@ -1456,6 +1466,9 @@ scale: 1.1;
 
     .main-nav{
         display: grid;
+        max-width: 1920px;
+        margin-right:auto;
+        margin-left: auto;
         
     }
 
@@ -1478,6 +1491,28 @@ scale: 1.1;
 }
 
 @media(min-width:830px) and (max-width:1619px){
+    .portfolioButton{
+        border: solid 4px #383635;
+        width: 120px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        font-size:1rem ;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        
+        scroll-behavior: smooth;
+        margin-top: 30%; 
+        animation: --portfolioButton-animation 950ms ease-out;
+        animation-fill-mode: forwards; 
+        position: relative;
+        animation-delay: 0.9s;
+        opacity: 0;
+        transition: background-color 300ms, scale 100ms;
+        
+    }
 
     .groupOfTechs{
         margin-top: 0px;
@@ -1534,6 +1569,28 @@ scale: 1.1;
 }
 
 @media(min-width:450px) and (max-width:829px){
+    .portfolioButton{
+        border: solid 4px #383635;
+        width: 120px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        font-size:1rem ;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        
+        scroll-behavior: smooth;
+        margin-top: 30%; 
+        animation: --portfolioButton-animation 950ms ease-out;
+        animation-fill-mode: forwards; 
+        position: relative;
+        animation-delay: 0.9s;
+        opacity: 0;
+        transition: background-color 300ms, scale 100ms;
+        
+    }
     .buttonAndImage,.jammmingbuttonAndImage{
         position: relative;
         display:grid;
@@ -1901,6 +1958,28 @@ scale: 1.1;
    
 }
 @media (max-width: 680px){
+    .portfolioButton{
+        border: solid 2px #383635;
+        width: 70px;
+        height: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        font-size:0.6rem ;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        
+        scroll-behavior: smooth;
+        margin-top: 30%; 
+        animation: --portfolioButton-animation 950ms ease-out;
+        animation-fill-mode: forwards; 
+        position: relative;
+        animation-delay: 0.9s;
+        opacity: 0;
+        transition: background-color 300ms, scale 100ms;
+        
+    }
     .portfolioButtonRight,.portfolioButtonLeft,.jammmingPortfolioButtonLeft,.jammmingPortfolioButtonRight{
         height: 23px;
     }
@@ -1918,7 +1997,7 @@ scale: 1.1;
     }
 
     .fullname{
-        font-size: 2.95rem;
+        font-size: 2.9rem;
         
     }
 
@@ -1934,12 +2013,7 @@ scale: 1.1;
        margin: 0; 
        font-size: xx-large;
     }
-    .portfolioButton{
-        width: max(5rem,12%);
-        height: 2rem;
-        font-size: 0.7rem;
-        border: solid 2px #383635;
-    }
+    
     .editdooTitle,.jammmingTitle{
         font-size: x-large;
         margin-bottom: 1rem;
