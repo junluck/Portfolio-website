@@ -393,7 +393,7 @@ a{
     margin-right: auto;
 }
 
-.editdooTitle,.jammmingTitle{
+.editdooTitle,.jammmingTitle,.grayscaleTitle{
     margin-bottom: 2%;
     font-size: clamp(1rem,2.15vw + 0.1rem,4rem);
     transform:translateY(40px);
@@ -401,12 +401,12 @@ a{
 
 }
 
-.portfolioButtonRight:active,.portfolioButtonLeft:active,.jammmingPortfolioButtonLeft:active,.jammmingPortfolioButtonRight:active{
+.portfolioButtonRight:active,.portfolioButtonLeft:active,.jammmingPortfolioButtonLeft:active,.jammmingPortfolioButtonRight:active,.grayscalePortfolioButtonLeft:active,.grayscalePortfolioButtonRight:active{
     transform: scale(0.90);
    
 }
 
-.portfolioButtonLeft,.jammmingPortfolioButtonLeft{
+.portfolioButtonLeft,.jammmingPortfolioButtonLeft,.grayscalePortfolioButtonLeft{
     height: 35px;
     margin-right:2% ;
     cursor: pointer;
@@ -422,7 +422,7 @@ a{
 }
 
 
-.portfolioButtonRight,.jammmingPortfolioButtonRight{
+.portfolioButtonRight,.jammmingPortfolioButtonRight,.grayscalePortfolioButtonRight{
     
     height: 35px;
     margin-left:2% ;
@@ -436,7 +436,7 @@ a{
     justify-self: end;
     
 }
-.editdooImage,.jammmingImage{
+.editdooImage,.jammmingImage,.grayscaleImage{
     width: 100%;
     margin-top: 0;
     border-radius:20px;
@@ -447,7 +447,7 @@ a{
     align-self: center;
 }
 
-.editdooWorkSec,.jammmingImageTwo{
+.editdooWorkSec,.jammmingImageTwo,.grayscaleImageTwo{
     width: 100%;
     margin-top: 0;
     border-radius:20px;
@@ -458,7 +458,7 @@ a{
     align-self: center;
 }
 
-.editdooFaqSec,.jammmingImageThree{
+.editdooFaqSec,.jammmingImageThree,.grayscaleImageThree{
     width: 100%;
     margin-top: 0;
     border-radius:20px;
@@ -473,7 +473,7 @@ a{
 
 
 
-.sliderbuttons,.jammmingsliderbuttons{
+.sliderbuttons,.jammmingsliderbuttons,.grayscalesliderbuttons{
     
     display: flex;
     flex-direction: column;
@@ -488,7 +488,7 @@ a{
 
 
 
-.sliderbuttons span,.jammmingsliderbuttons span{
+.sliderbuttons span,.jammmingsliderbuttons span,.grayscalesliderbuttons span{
     border: solid 2px #383635;
     height: 12px;
     width: 12px;
@@ -498,12 +498,12 @@ a{
 }
 
 
-.sliderbuttons span:hover,.jammmingsliderbuttons span:hover{
+.sliderbuttons span:hover,.jammmingsliderbuttons span:hover,.grayscalesliderbuttons span:hover{
     background-color: #6A994E!important;
     cursor: pointer;
 }
 
-.sliderbuttons span:nth-child(1),.jammmingsliderbuttons span:nth-child(1){
+.sliderbuttons span:nth-child(1),.jammmingsliderbuttons span:nth-child(1), .grayscalesliderbuttons span:nth-child(1){
     align-self: baseline;
     background-color: #6A994E;
     cursor: pointer;
@@ -511,20 +511,20 @@ a{
 
 
 }
-.sliderbuttons span:nth-child(1),.jammmingsliderbuttons span:nth-child(1){
+.sliderbuttons span:nth-child(1),.jammmingsliderbuttons span:nth-child(1),.grayscalesliderbuttons span:nth-child(1){
     align-self: baseline;
     background-color: #6A994E;
 }
 
-.sliderbuttons span:nth-child(2),.jammmingsliderbuttons span:nth-child(2){
+.sliderbuttons span:nth-child(2),.jammmingsliderbuttons span:nth-child(2),.grayscalesliderbuttons span:nth-child(2){
     align-self: center;
 }
 
-.sliderbuttons span:nth-child(3),.jammmingsliderbuttons span:nth-child(3){
+.sliderbuttons span:nth-child(3),.jammmingsliderbuttons span:nth-child(3),.grayscalesliderbuttons span:nth-child(3){
     align-self: end;
 }
 
-.editdooDescription,.jammmingDescription{
+.editdooDescription,.jammmingDescription,.grayscaleDescription{
     font-size: clamp(1rem,1vw + 0.1rem,1.6rem) ;
     line-height: 140%;
     margin-top: 0;
@@ -538,7 +538,7 @@ a{
     grid-row-end: 3;
    
 }
-.buttons,.jammmingbuttons{
+.buttons,.jammmingbuttons,.grayscalebuttons{
     display: flex;
     flex-direction: row;
     justify-self: start;
@@ -1432,7 +1432,7 @@ scale: 1.1;
 }
 
 @media(min-width:1620px){
-    .buttonAndImage,.jammmingbuttonAndImage{
+    .buttonAndImage,.jammmingbuttonAndImage,.grayscalebuttonAndImage{
         position: relative;
         display:grid;
         grid-template-columns: 50px 90% 50px;
@@ -1521,7 +1521,7 @@ scale: 1.1;
         grid-template-rows: 100%;
         grid-column-gap: 10px;
     }
-    .buttonAndImage,.jammmingbuttonAndImage{
+    .buttonAndImage,.jammmingbuttonAndImage,.grayscalebuttonAndImage{
         position: relative;
         display:grid;
         grid-template-columns: 50px 90% 50px;
@@ -1535,7 +1535,7 @@ scale: 1.1;
         
     }
 
-    .editdooDescription,.jammmingDescription{
+    .editdooDescription,.jammmingDescription,.grayscaleDescription{
         font-size: 1.5rem ;
         line-height: 140%;
         margin-top: 0;
@@ -1591,7 +1591,7 @@ scale: 1.1;
         transition: background-color 300ms, scale 100ms;
         
     }
-    .buttonAndImage,.jammmingbuttonAndImage{
+    .buttonAndImage,.jammmingbuttonAndImage,.grayscalebuttonAndImage{
         position: relative;
         display:grid;
         grid-template-columns: 50px 90% 50px;
@@ -1605,7 +1605,7 @@ scale: 1.1;
        
         
     }
-    .portfolioButtonLeft,.jammmingPortfolioButtonLeft{
+    .portfolioButtonLeft,.jammmingPortfolioButtonLeft,.grayscalePortfolioButtonLeft{
     
         justify-self: center;
         
@@ -1613,7 +1613,7 @@ scale: 1.1;
     }
     
     
-    .portfolioButtonRight,.jammmingPortfolioButtonRight{
+    .portfolioButtonRight,.jammmingPortfolioButtonRight,.grayscalePortfolioButtonRight{
         
         justify-self: center;
         
@@ -1627,7 +1627,7 @@ scale: 1.1;
     }
 
 
-    .editdooDescription,.jammmingDescription{
+    .editdooDescription,.jammmingDescription,.grayscaleDescription{
         font-size: 1.2rem ;
         line-height: 140%;
         margin-top: 0;
@@ -1651,7 +1651,7 @@ scale: 1.1;
 }
 
 @media(min-width:320px) and (max-width:449px){
-    .buttonAndImage,.jammmingbuttonAndImage{
+    .buttonAndImage,.jammmingbuttonAndImage,.grayscalebuttonAndImage{
         position: relative;
         display:grid;
         grid-template-columns: 30px 90% 30px;
@@ -1719,7 +1719,7 @@ scale: 1.1;
         cursor: pointer;
     }
 
-    .portfolioButtonLeft,.jammmingPortfolioButtonLeft{
+    .portfolioButtonLeft,.jammmingPortfolioButtonLeft,.grayscalePortfolioButtonLeft{
     
         justify-self: center;
         
@@ -1727,13 +1727,13 @@ scale: 1.1;
     }
     
     
-    .portfolioButtonRight,.jammmingPortfolioButtonRight{
+    .portfolioButtonRight,.jammmingPortfolioButtonRight,.grayscalePortfolioButtonRight{
         
         justify-self: center;
         
     }
 
-    .editdooDescription,.jammmingDescription{
+    .editdooDescription,.jammmingDescription,.grayscaleDescription{
         font-size: 1rem ;
         line-height: 140%;
         margin-top: 0;
@@ -1783,12 +1783,12 @@ scale: 1.1;
     .navbar{
         display: none;
     }
-    .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree{
+    .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree,.grayscaleImage,.grayscaleImageTwo,.grayscaleImageThree{
         width: 100%;
         border-radius: 20px;
     }
 
-    .editdooDescription,.jammmingDescription{
+    .editdooDescription,.jammmingDescription,.grayscaleDescription{
         
         align-content: center;
         justify-items: center;
@@ -1806,7 +1806,7 @@ scale: 1.1;
         font-size: xxx-large;
     }
 
-    .editdooTitle,.jammmingTitle{
+    .editdooTitle,.jammmingTitle,.grayscaleTitle{
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
@@ -1980,7 +1980,7 @@ scale: 1.1;
         transition: background-color 300ms, scale 100ms;
         
     }
-    .portfolioButtonRight,.portfolioButtonLeft,.jammmingPortfolioButtonLeft,.jammmingPortfolioButtonRight{
+    .portfolioButtonRight,.portfolioButtonLeft,.jammmingPortfolioButtonLeft,.jammmingPortfolioButtonRight,.grayscalePortfolioButtonLeft,.grayscalePortfolioButtonRight{
         height: 23px;
     }
     .heading{
@@ -2014,7 +2014,7 @@ scale: 1.1;
        font-size: xx-large;
     }
     
-    .editdooTitle,.jammmingTitle{
+    .editdooTitle,.jammmingTitle,.grayscaleTitle{
         font-size: x-large;
         margin-bottom: 1rem;
     }
@@ -2030,7 +2030,7 @@ scale: 1.1;
 
     }
     
-    .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree{
+    .editdooImage,.editdooFaqSec,.editdooWorkSec,.jammmingImage,.jammmingImageTwo,.jammmingImageThree,.grayscaleImage,.grayscaleImageTwo,.grayscaleImageThree{
         border-radius: 15px;
         
     }

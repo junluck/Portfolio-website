@@ -164,11 +164,14 @@ const rightArrowJammming = document.querySelector(".jammmingPortfolioButtonRight
 const leftArrowJammming = document.querySelector(".jammmingPortfolioButtonLeft");
 const arrayOfPicturesJammming = [document.querySelector(".jammmingImage"), document.querySelector(".jammmingImageTwo"),document.querySelector(".jammmingImageThree")];
 const arrayOfCirclesJammming = [document.querySelector(".jammmingfirstCircle"), document.querySelector(".jammmingsecondCircle"), document.querySelector(".jammmingthirdCircle")];
-
+const rightArrowGrayscale = document.querySelector(".grayscalePortfolioButtonRight");
+const leftArrowGrayscale = document.querySelector(".grayscalePortfolioButtonLeft");
+const arrayOfPicturesGrayscale = [document.querySelector(".grayscaleImage"), document.querySelector(".grayscaleImageTwo"),document.querySelector(".grayscaleImageThree")];
+const arrayOfCirclesGrayscale = [document.querySelector(".grayscaleFirstCircle"), document.querySelector(".grayscaleSecondCircle"), document.querySelector(".grayscaleThirdCircle")];
 // Initialize the slider functionality with the right and left arrows and the array of pictures
 eventListenerForSlider(rightArrow, leftArrow, arrayOfPictures, arrayOfCircles );
 eventListenerForSlider(rightArrowJammming, leftArrowJammming, arrayOfPicturesJammming, arrayOfCirclesJammming );
-
+eventListenerForSlider(rightArrowGrayscale, leftArrowGrayscale, arrayOfPicturesGrayscale, arrayOfCirclesGrayscale)
 
 // Function to append a project heading to the projects div
 const appendProjects = function (headingProject)
